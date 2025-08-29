@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.main2 {
+  width: 100%;
+  height: 100%;
+  background-color: #171914;
+  /* background-color: #6BFF63; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.subMain2 {
+  width: 80%;
+  height: 100%;
+  /* background-color: #6BFF63; */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  /* justify-content: space-between; */
+  gap: 10%;
+  position: relative;
+}
+.heading {
+  display: flex;
+}
+.white {
+  color: white;
+  font-size: 34px;
+  font-family: lato;
+}
+.green {
+  color: #6bff63;
+  font-size: 34px;
+  font-family: lato;
+  margin-left: 10px;
+}
+
+.bgLine {
+  width: 10%;
+  height: 20%;
+  position: absolute;
+  top: 130%;
+  left: 60%;
+}
+.bioBox {
+  width: 90%;
+  height: 60%;
+  margin-left: 6%;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  /* gap: 10px; */
+}
+.bio {
+  width: 90%;
+  height: 50%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 30%;
+}
+.bio h4 {
+  font-size: 18px;
+  color: #6bff63;
+  font-family: lato;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.bio p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
+  /* padding-top: 10px; */
+  font-family: lato;
+  /* font-weight: 800; */
+  letter-spacing: 1px;
+}
+
+@media (max-width:  768px) {
+  body {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+  }
+
+  .main2 {
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .subMain2 {
+    width: 90%;
+    gap: 20px;
+  }
+
+  .heading {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .white,
+  .green {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .bgLine {
+    display: none; /* hide background shape on mobile for cleaner UI */
+  }
+
+  .bioBox {
+    width: 100%;
+    grid-template-columns: 1fr; /* single column */
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .bio {
+    width: 100%;
+    height: auto;
+    padding: 15px 10px;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .bio:last-child {
+    border-bottom: none; /* remove line from last item */
+  }
+
+  .bio h4 {
+    font-size: 16px;
+  }
+
+  .bio p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+

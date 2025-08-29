@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.education {
+  width: 100%;
+  height: 60%;
+  background-color: #171914;
+  /* background-color: aliceblue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+  /* gap: 20px; */
+  position: relative;
+}
+.education img {
+  width: 8%;
+  height: 40%;
+  position: absolute;
+  top: 26%;
+  left: 10%;
+}
+.education p {
+  height: 20%;
+  color: white;
+  font-size: 30px;
+  font-family: lato;
+  /* margin-left: 12%;
+  padding-top: 40px; */
+}
+.eduMain {
+  width: 70%;
+  height: 100%;
+  /* background-color: aliceblue; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.eduDetail {
+  width: 80%;
+  height: 60%;
+  border-radius: 30px;
+  border: 2px solid rgb(107, 255, 99);
+  box-shadow: 0px 4px 15px 2px rgba(107, 255, 99, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  /* justify-content: center; */
+}
+.eduDetail h4 {
+  width: 100%;
+  font-size: 16px;
+  font-family: lato;
+  color: rgba(107, 255, 99, 0.8);
+  margin: 40px;
+  margin-bottom: 0;
+}
+.year {
+  color: rgba(107, 255, 99, 0.8);
+  margin-left: 46%;
+}
+.eduDetail h5 {
+  width: 60%;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  font-weight: 400;
+  margin: 40px;
+  margin-top: 10px;
+}
+.eduDetail h3 {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: lato;
+  width: 60%;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 40px;
+  margin-top: 0;
+}
+
+
+@media (max-width:  768px) {
+  body {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+  }
+
+  .education {
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .education img {
+    width: 15%;
+    height: auto;
+    top: 10%;
+    left: 5%;
+  }
+
+  .education p {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .eduMain {
+    width: 100%;
+    grid-template-columns: 1fr; /* stack vertically */
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .eduDetail {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .eduDetail h4 {
+    font-size: 14px;
+    margin: 20px 10px 5px 10px;
+  }
+
+  .year {
+    margin-left: 0;
+    font-size: 13px;
+    text-align: right;
+    width: 100%;
+  }
+
+  .eduDetail h5 {
+    width: 100%;
+    font-size: 13px;
+    margin: 10px;
+  }
+
+  .eduDetail h3 {
+    width: 100%;
+    font-size: 13px;
+    margin: 10px;
+  }
+}

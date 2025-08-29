@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.main4 {
+  width: 100%;
+  height: 110%;
+  background-color: #050505;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  /* background-color: aliceblue; */
+}
+.mainP{
+    color: white;
+    font-size: 34px;
+    padding-top: 40px;
+}
+.mainProjectContainer{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* background-color: aliceblue; */
+}
+.figmaProject{
+    width: 100%;
+    height: 100%;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* background-color: aliceblue; */
+}
+.project1{
+    width: 80%;
+    height: 74%;
+    border-radius: 10px;
+    
+}
+.project1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    
+}
+
+.bottom{
+    width: 100%;
+    height: 18%;
+    margin-top: 8px;
+    border: 2px solid #6bff63;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    /* opacity: 0; */
+}
+
+.bottomP{
+    color: white;
+    font-size: 12px;
+  
+
+
+}
+a{
+    text-decoration: none;
+    color: white;
+
+}
+.icon{
+    width: 10%;
+    height: 70%;
+    border-radius: 50px;
+    background-color: #6bff63;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon i{
+    /* color: white; */
+    font-size: 16px;
+    font-weight: 600;
+}
+.project1:hover .bottom{
+    /* opacity: 1; */
+  box-shadow: 0px 4px 15px 2px rgba(107, 255, 99, 0.6);
+  transition: all ease-out 0.4s;
+
+}
+
+
+.project2{
+    width: 30%;
+    height: 60%;
+    
+}
+.project2 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.bottom2{
+    width: 100%;
+    height: 18%;
+    margin-top: 8px;
+    border: 2px solid #6bff63;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    /* opacity: 0; */
+}
+
+.bottomP2{
+    color: white;
+    font-size: 12px;
+
+}
+.icon2{
+    width: 10%;
+    height: 70%;
+    border-radius: 50px;
+    background-color: #6bff63;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon2 i{
+    /* color: white; */
+    font-size: 16px;
+    font-weight: 600;
+}
+.mainP2{
+    color: white;
+    font-size: 34px;
+    /* margin-top: 6%; */
+    padding-top: 4%;
+    /* padding-bottom: 5%; */
+}
+
+.riveProject{
+    width: 100%;
+    height: 26%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aliceblue; */
+}
+.riveProject1{
+    width: 26%;
+    height: 60%;
+    
+}
+.riveProject1 img{
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+    /* background-color: #050505; */
+}
+.riveProject2{
+    width: 26%;
+    height: 60%;
+    
+}
+.riveProject2 img{
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+}
+.mainP3{
+    color: white;
+    font-size: 34px;
+    /* margin-top: 6%; */
+    padding-top: 3%;
+   
+}
+.psProject{
+    width: 100%;
+    height: 26%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* background-color: aliceblue; */
+}
+.psProject1{
+    width: 26%;
+    height: 80%;
+    
+}
+.psProject1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .main4{
+    height: 200%;
+  }
+  .mainP,
+  .mainP2,
+  .mainP3 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .mainProjectContainer {
+    width: 95%;
+    height: auto;
+  }
+
+  .figmaProject {
+    /* height: auto; */
+    grid-template-columns: repeat(1, 1fr); /* instead of 3 */
+    justify-items: center;
+    grid-gap: 5rem;
+  }
+
+  .project1 {
+    width: 84%;
+    height: auto;
+  }
+
+  .bottom,
+  .bottom2 {
+    height: 16%;
+    font-size: 10px;
+  }
+
+  .riveProject,
+  .psProject {
+    flex-direction: column;
+    gap: 1rem;
+    height: auto;
+  }
+
+  .riveProject1,
+  .riveProject2,
+  .psProject1 {
+    width: 80%;
+    height: auto;
+  }
+
+  .riveProject1 img,
+  .riveProject2 img,
+  .psProject1 img {
+    width: 100%;
+    height: auto;
+  }
+}
