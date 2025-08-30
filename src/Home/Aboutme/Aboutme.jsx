@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../Aboutme/Aboutme.css";
 import myPic from "../../Assets/MyPic.png";
-import resume from "../../Assets/Mano priya Cv.pdf";
+import resume from "../../Assets/Mano priya_CV.pdf";
 import { motion } from "framer-motion";
 
 const Aboutme = () => {
@@ -48,8 +48,6 @@ const Aboutme = () => {
               <div key={currentIndex} className="flip-word">
                 {flipWords[currentIndex]}
               </div>
-                 
-
             </div>
           </motion.div>
           {/* </div> */}
@@ -62,7 +60,8 @@ const Aboutme = () => {
             viewport={{ once: true, amount: 0.3 }}
           >
             <p className="aboutmePara">
-              From idea to interaction — I build interfaces that people remember.
+              From idea to interaction — I build interfaces that people
+              remember.
             </p>
           </motion.div>
 
