@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
 import "../Contact/Contact.css";
 import { motion } from "framer-motion";
 import {
@@ -9,12 +10,33 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 // import { useContext } from "react";
-// import BackgroundContext from "../../Context/BackgroundContext"; 
+// import BackgroundContext from "../../Context/BackgroundContext";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_duxq7bu",
+        "template_6wvdtl6",
+        form.current,
+        "1SVsLziwtRg8C0al5"
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          alert("Failed to send message, try again.");
+        }
+      );
+  };
   // const { back } = useContext(BackgroundContext);
   return (
-    <div id="contact" className="contact-section" > 
+    <div id="contact" className="contact-section">
       <motion.h2
         className="contact-title"
         initial={{ opacity: 0, y: -20 }}
@@ -23,24 +45,40 @@ const Contact = () => {
       >
         Contact
       </motion.h2>
-
+{/* console.log(form.current); */}
       <div className="contact-container">
         <motion.form
+          ref={form}
+          onSubmit={sendEmail}
           className="contact-form"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <input type="text" placeholder="Your Name" required  />
-          <input type="email" placeholder="Your Email" required  />
-          <textarea placeholder="Your Message" rows="6" required ></textarea>
+          <input
+            type="text"
+            name="user_name"
+            placeholder="Your Name"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            name="user_email"
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="6"
+            required
+          ></textarea>
           <button type="submit">Send Message</button>
         </motion.form>
 
         <motion.div
           className="contact-info"
-         
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
@@ -65,13 +103,25 @@ const Contact = () => {
           <div className="info-item">
             <h3>Social Links</h3>
             <div className="social-links">
-              <a href="https://github.com/manopriya-coder" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/manopriya-coder"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FaGithub /> GitHub
               </a>
-              <a href="https://www.linkedin.com/in/mano-priya-3690bb2b7/" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.linkedin.com/in/mano-priya-3690bb2b7/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FaLinkedin /> LinkedIn
               </a>
-              <a href="https://wa.me/918489287943" target="_blank" rel="noreferrer">
+              <a
+                href="https://wa.me/918489287943"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FaWhatsapp /> WhatsApp
               </a>
             </div>

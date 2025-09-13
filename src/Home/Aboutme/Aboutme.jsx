@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../Aboutme/Aboutme.css";
 import myPic from "../../Assets/MyPic.png";
-import resume from "../../Assets/Mano priya_CV.pdf";
+import resume from "../../Assets/Manopriya-OrgCv.pdf";
 import { motion } from "framer-motion";
 
 const Aboutme = () => {
