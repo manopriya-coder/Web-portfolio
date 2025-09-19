@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import "./Footer.css";
 import { useContext } from "react";
 // import BackgroundContext from "../../Context/BackgroundContext";
-import resume from "../../Assets/Manopriya-OrgCv.pdf"
+import resume from "../../Assets/Manopriya_Resume.pdf"
 
 const Footer = () => {
 //   const { back } = useContext(BackgroundContext);
